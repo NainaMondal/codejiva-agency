@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  /* Deep dark navy/black background matching the mockup hero */
+  --background: #09090b; 
+  /* Crisp white text */
+  --foreground: #f8fafc; 
+  /* Vibrant Purple from the mockup buttons */
+  --primary: #a855f7; 
+  /* Lighter lavender for gradients */
+  --secondary: #c084fc; 
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Dark mode glassmorphism with a subtle purple tint */
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
