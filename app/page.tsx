@@ -6,13 +6,13 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { BookingModal } from "@/components/ui/BookingModal";
 // Added Mail and Phone icons to the import
 import { LayoutTemplate, Search, Code, ShieldCheck, Smartphone, Bot, CalendarCheck, Share2, Globe, Mail, Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  // Animation variants for staggered hero elements
-  const containerVariants = {
+// Animation variants for staggered hero elements
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -20,11 +20,11 @@ export default function Home() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
-
+  
   return (
     <>
       {/* 1. Animated Hero Section */}
